@@ -1,0 +1,165 @@
+/* nav 코드 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100%;
+    /*기본 폰트*/
+    font-family:'Roboto', sans-serif;
+    background-color: #fff2f2
+}
+    
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.nav-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Black Han Sans", sans-serif;
+}
+
+nav {
+    height: 80px; 
+    line-height: 80px;
+    background-color:#FFb6b6; 
+}
+
+.nav-menu {
+    height: 80px;
+    font-size: 25px; /* 3번) 폰트 사이즈를 지정해주세요. */
+    float: left;
+    padding: 0;
+}
+.port{
+    margin: 0 30px;
+}
+.about{
+    margin:0;
+    padding-right:15px;
+}
+.goal{
+    margin:0;
+    padding-right: 30px;
+}
+
+/* header 코드 */
+/* section 코드 */
+
+.sec {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.atc {
+    width: 500px;
+    margin:0 auto;
+}
+
+
+.sec article img {
+    width: 100%;
+    height: auto;
+}
+
+.card-img {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    border-radius: 30px;
+}
+
+.sec::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.rong {
+    /* 6번) 글자 기울이기, 두껍게, 폰트 사이즈는 25px, 색상은 검정색으로 지정해주세요. */
+    width: 500px;
+    font-size: 25px;
+    color:black;
+    font-family: "Black Han Sans", sans-serif;
+}
+
+
+
+.daemun {
+    /* 7번) 글자 두껍게, 폰트 사이즈는 20px로 지정해주세요. */
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 0px;
+
+}
+
+.daedap {
+    /* 8번) 글자 얇게, 폰트 사이즈는 15px로 지정해주세요. */
+    font-weight: bold;
+    width:500px;
+    font-size: 20px;
+    text-align: left;  
+    margin-top: 0px;
+}
+.span-bold{
+    font-family: "Black Han Sans", sans-serif;
+    font-size: 30px;
+    color:white; 
+    -webkit-text-stroke: 1px black;
+}
+/*about sec*/
+.atc-row{
+    width: auto;
+    height: auto;
+    display:flex;
+    flex-direction: row;
+}
+.atc-about{
+    margin:40px;
+}
+.p-about{
+    padding:0 20px;
+}
+.pro-img {
+    overflow: hidden;
+    width: 400px;
+    height: 350px;
+}
+.pro-img img {
+    border-radius: 10px;
+}
+.hd-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.hd{
+    border-style: dotted;
+    border-radius: 10px;
+    width: 250px;
+    margin:10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+}
+/* footer */
+.ft {
+    padding: 10px;
+    text-align: center;
+    background-color:#FFb6b6;    /* 9번) 원하는 컬러로 지정해주세요. */
+    font-weight: bold;
+    color: white;
+}
