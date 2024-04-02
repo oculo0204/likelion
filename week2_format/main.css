@@ -1,0 +1,47 @@
+body{
+    margin:0;
+    padding: 0;
+}
+/* margin: 0 auto 는 width, height이 정해져 있어야 기능한다.*/
+.bct{ 
+    width:1250px;
+    height: 1080px;
+    margin:0 auto;
+}
+.container{
+    margin:0 auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.hd1:nth-child(1){
+    width:250px;
+    height: 100px;
+    background-color: #EEEEE9;
+}
+.hd1:nth-child(2){
+    width: 1000px;
+    height:100px;
+    background-color: #D6CCC2;
+}
+.sc1{
+    width: 1250px;
+    height: 440px;
+    background-color: #F5ECE1;
+}
+.sc2{
+    width:625px;
+    height:440px;
+}
+.sc2:nth-child(1){
+    background-color: #E4D6CA;
+}
+.sc2:nth-child(2){
+    background-color: #D5BEB1;
+}
+.ft1{
+    width: 1250px;
+    height: 100px;
+    background-color: #D6CCC2;
+}
