@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+}
+#wrap{
+    width:1280px;
+    height: 1080px;
+    margin: 0 auto;
+}
+#logo{
+    width: 200px;
+    height: 100px;
+    background-color: #EAE9EE;
+}
+#nav{
+    width: 1080px;
+    height: 100px;
+    background-color: #C2C3D6;
+}
+.sc01{
+    width: 250px;
+    height: 440px;
+    background-color: #E1E1F5;
+}
+.sc02-1-1{
+    width: 730px;
+    height: 220px;
+    background-color: #C0C0FB;
+}
+.sc02-1-2{
+    width:300px;
+    height: 220px;
+    background-color: #7878D4;
+}
+.sc02-2-1{
+    width: 280px;
+    height: 220px;
+    background-color: #9999EF;
+}
+.sc02-2-2{
+    width: 750px;
+    height: 220px;
+    background-color: #CACBE4;
+}
+.under-sc01{
+    width: 177px;
+    height: 440px;
+    background-color: #7878D4;
+}
+.under-sc02{
+    width: 176px;
+    height: 440px;
+    background-color: #353AC2;
+}
+.under-sc03{
+    width: 177px;
+    height: 440px;
+    background-color: #0D1163;
+}
+.under-sc04-1{
+    width: 750px;
+    height: 242px;
+    background-color: #666CEE;
+}
+.under-sc04-2-1{
+    width: 372px;
+    height: 198px;
+    background-color: #7D7FA7;
+}
+.under-sc04-2-2{
+    width: 378px;
+    height: 198px;
+    background-color: #4C4F8C;
+}
+.ft1{
+    width: 200px;
+    height: 100px;
+    background-color: #3A258A;
+}
+.ft2{
+    width: 880px;
+    height: 100px;
+    background-color: #6469CD;
+}
