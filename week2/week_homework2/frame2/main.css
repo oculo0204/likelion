@@ -136,7 +136,12 @@ img{
 @media(max-width:450px){
     #header{
         width: 450px;
-        justify-content: left;
+        justify-content: right;
+    }
+    .hd1{
+        width: 100px;
+        height: 100px;
+
     }
     #main{
         width: 450px;
@@ -147,25 +152,48 @@ img{
     .sec{
         flex-direction: column;
     }
-    #section01{
+    #section1{
         display: flex;
-        flex-direction: row;
     }
     .sec01{
         width:225px;
         height: 440px;
+        display: block;
     }
     .sec02{
-        float:left;
-        display: flex;
-        flex-direction: row-reverse;
+        display: block;
+        width:225px;
+        height: 440px;
+        background-image: url(./imz/Rectangle\ 66-2.png);
     }
     .sec02-2{
-        width: 225px;
-        height: 440px;
+        display: none;
     }
     .sec02-1{
-        width: 450px;
+        display: none;
+    }
+    .sec03{
+        display: none;
+    }
+    .content{
+        display: flex;
+    }
+    .content01{
+        display: block;
+        width: 225px;
         height: 220px;
+    }
+    .content02{
+        display: block;
+        width: 225px;
+        height: 220px;
+        background-image: url(./imz/Rectangle\ 66-1.png);
+    }
+    .ft1{
+        display: none;
+    }
+    .ft2{
+        width: 450px;
+        height: 100px;
     }
 }
