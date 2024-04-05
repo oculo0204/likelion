@@ -1,0 +1,171 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#wrap{
+    width: 1280px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.container{
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#header{
+    display:flex;
+}
+.hd1{
+    width: 200px;
+    height: 100px;
+    background: #EAE9EE;
+}
+.hd2{
+    width: 1080px;
+    height: 100px;
+    background-color: #C2C3D6;
+}
+#main{
+    display: flex;
+}
+#section1{
+    display: flex;
+}
+.sec01{
+    width: 250px;
+    height: 440px;
+    overflow: hidden;
+}
+.sec02-1{
+    width: 730px;
+    height: 220px;
+    overflow: hidden;
+}
+.sec02-2{
+    width: 730px;
+    height: 220px;
+    overflow: hidden;
+}
+.sec03{
+    width: 980px;
+    height: 440px;
+    overflow: hidden;
+}
+.content01{
+    width: 300px;
+    height: 880px;
+    overflow: hidden;
+}
+#footer{
+    display: flex;
+}
+.ft1{
+    width: 200px;
+    height: 100px;
+    background-color: #3A258A;
+}
+.ft2{
+    width: 880px;
+    height: 100px;
+    background-color: #6469CD;
+}
+
+@media(max-width:680px){
+    #header{
+        width: 680px;
+        height: 100px;
+        background-color: #C2C3D6;
+        justify-content: center;
+    }
+    .hd1{
+        width: 200px;
+        height: 100px;
+    }
+    .hd2{
+        width:0;
+        height: 0;
+    }
+    #main{
+        width:680px;
+        display: block;
+    }
+    #section1{
+        width:680px;
+        display: block;
+    }
+    #footer{
+        width:680px;
+    }
+    .sec01{
+        height: 0;
+        width: 0;
+    }
+    .sec02-1{
+        width: 680px;
+        height: 220px;
+    }
+    .sec02-2{
+        width: 680px;
+        height: 220px;
+    }
+    .sec03{
+        width: 680px;
+        height: 440px;
+    }
+    #section2{
+        width: 680px;
+    }
+    .sec{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content01{
+        height: 0;
+        width: 0;
+    }
+    .ft1{
+        width: 106px;
+    }
+    .ft2{
+        width: 468px;
+    }
+}
+@media(max-width:450px){
+    #header{
+        width: 450px;
+        justify-content: left;
+    }
+    #main{
+        width: 450px;
+    }
+    #footer{
+        width: 450px;
+    }
+    .sec{
+        flex-direction: column;
+    }
+    #section01{
+        display: flex;
+        flex-direction: row;
+    }
+    .sec01{
+        width:225px;
+        height: 440px;
+    }
+    .sec02{
+        float:left;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .sec02-2{
+        width: 225px;
+        height: 440px;
+    }
+    .sec02-1{
+        width: 450px;
+        height: 220px;
+    }
+}
