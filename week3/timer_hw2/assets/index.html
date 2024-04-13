@@ -41,15 +41,15 @@
             if (time ==''){
                 alert('시간을 입력해주세요!')
                 i =0;
-                return
+                return;
             }else if(isNaN(time)){
                 alert('숫자를 입력하세요.')
                 i =0;
-                return
+                return;
             }else if(time>6000){
                 alert('표현할 수 있는 시간을 넘었습니다.')
                 i =0;
-                return
+                return;
             }
             t= time;
             
@@ -71,6 +71,11 @@
                     sec.textContent =`0${s}`;
                 }else{
                     sec.textContent = s;
+                }
+                if(t===0){
+                    alert('시간이 다 되었습니다!');
+                    t--;
+                    return;
                 }
             t--;
             },1000);
