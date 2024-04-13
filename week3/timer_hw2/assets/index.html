@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1>Timer</h1>
+            <div id="add">
+                <input type="text" id= "input_timer" placeholder="시간을 입력해주세요!">
+                <button id="addbtn"><img src="./img/plus.svg" alt="plusbtn"></button>
+            </div>
+        </header>
+        <main id="main">
+            <div class="circle"></div>
+            <div class="box">
+                <p class="count" id="min">00</p>
+                <p class="count">:</p>
+                <p class="count" id="sec">00</p>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        const input = document.getElementById('input_timer');
+        const main = document.getElementById('main');
+        const Addbtn = document.getElementById('addbtn');
+        const min = document.getElementById('min');
+        const sec = document.getElementById('sec');
+        let i =0;
+        let m=0;
+        let s=0;
+        let t=0;
+        Addbtn.addEventListener('click',()=>{
+            let time =input.value;
+            if (time ==''){
+                alert('시간을 입력해주세요!')
+                i =0;
+                return
+            }else if(isNaN(time)){
+                alert('숫자를 입력하세요.')
+                i =0;
+                return
+            }else if(time>6000){
+                alert('표현할 수 있는 시간을 넘었습니다.')
+                i =0;
+                return
+            }
+            t= time;
+            
+            setInterval(function (){
+                if(isNaN(t)||t<0){
+                    return;
+                }
+
+                m =parseInt(t/60);
+                if(m<10)
+                {
+                    min.textContent =`0${m}`;
+                }else{
+                    min.textContent = m;
+                }
+                s=t%60;
+                if(s<10)
+                {
+                    sec.textContent =`0${s}`;
+                }else{
+                    sec.textContent = s;
+                }
+            t--;
+            },1000);
+        })
+        
+
+    })
+</script>
+</html>

@@ -23,6 +23,9 @@ body{
     height: 100px;
     background-color: #D6CCC2;
 }
+#main{
+    position: relative;
+}
 .content01{
     width: 1250px;
     height: 440px;
@@ -40,6 +43,14 @@ body{
     width: 625px;
     height: 440px;
     background-color: #D5BEB1;
+}
+.content03{
+    width: 500px;
+    height: 500px;
+    background-color: #866756;
+    position: absolute;
+    top: 175px;
+    left: 375px;
 }
 .ft1{
     width: 1250px;

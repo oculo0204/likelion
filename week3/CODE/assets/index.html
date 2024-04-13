@@ -24,32 +24,44 @@
         const Addbtn=document.getElementById('addbtn');
         const Main=document.getElementById('main');
         let Index=0;
+        //입력 버튼을 눌렀을 때
         Addbtn.addEventListener('click',()=>{
+            //내용이 없으면 삭제
             if(InputTodo.value ==''){
                 alert('내용을 입력해주세요.');
                 return;
             }
+            
+            //box와 deletebtn 담음
             const list = document.createElement('div');
             list.classList.add('list');
+            //checkbox, label. text(p) 담음
             const box = document.createElement('div');
             box.classList.add('box');
 
+            // 변수 = html 태그 생성
             const checkbox = document.createElement('input');
+            // 그 변수에 속성 부여
             checkbox.setAttribute('type', 'checkbox')
             checkbox.setAttribute('id', `checkbox${Index}`)
 
             const label = document.createElement('label');
             label.setAttribute('for',`checkbox${Index}`);
 
+            //목록에 input된 내요 추가
             const text = document.createElement('p');
             text.textContent = InputTodo.value;
 
             const deletebtn = document.createElement('button');
             deletebtn.innerHTML = `<img src="./img/exit.svg" alt="deletebtn">`;
 
+            //delete 이벤트
+            //document.이 아니라 deletevtn으로 시작
             deletebtn.addEventListener('click',(event)=>{
                 event.currentTarget.parentNode.parentNode.removeChild(event.currentTarget.parentNode)
             });
+
+            //checkbox 체크하면 줄 그어서 없애기
             checkbox.addEventListener('change',()=>{
                 if(checkbox.checked){
                     text.style.textDecoration ='line-through';
@@ -64,9 +76,11 @@
             list.appendChild(box);
             list.appendChild(deletebtn);
 
+            //main에 집어넣어주기
             Main.appendChild(list);
+            //input 입력되면 지워주기
             InputTodo.value ='';
-            index++;
+            Index++;
         })
     })       
     </script>
