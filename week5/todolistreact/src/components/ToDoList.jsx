@@ -5,11 +5,21 @@ import exit from '../assets/img/exit.svg'
 import AddList from './AddList';
 
 const ToDoList = () => {
-    const [inputtodo,setInputToDo]=useState(''); //input의 text 받음
-    const [inputtodos,setInputToDos]=useState([]); // 배열로 저장해서 map으로 한번에 render
+    const [inputtodo,setInputToDo]=useState('');
+    const [inputtodos,setInputToDos]=useState([]);
     const [addbtn,setAddBtn]=useState(false);
     
     let index = 0;
+    const onRemove = (target) => {
+        for (let el of inputtodos){
+            if(el===target)
+                {
+                    inputtodos.delete(el);
+                }
+        }
+        setInputToDos(inputtodos);
+        console.log(inputtodos);
+      };
     return (
         <div id="wrap">
             <header id="header">
@@ -26,7 +36,7 @@ const ToDoList = () => {
                 </div>
             </header>
             <main id="main">
-                {inputtodos.map((inputtodo,index)=><AddList inputtodos={inputtodos} inputtodo={inputtodo} index ={index}/>)}
+                {inputtodos.map((inputtodo,index)=><AddList inputtodos={inputtodo}inputtodo={inputtodo} index ={index} onRemove={onRemove}/>)}
             </main>
         </div>
         
