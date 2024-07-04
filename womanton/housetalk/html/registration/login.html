@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="login-wrapper">
+            <header id="login-header">
+                <div class="logo-header"></div>
+                <div ><span class="logo-text">안심할 수 있는 집 이야기, 안심집톡</span></div>
+            </header>
+            <form method="post" action="{% url 'users:login'%}" id="login-form">
+                <input type="text" name="userId" placeholder="아이디 입력">
+                <input type="password" name="password" placeholder="비밀번호 입력">
+                <input class="login-submit" type="submit" value="로그인">
+                <div class="login_others">
+                    <button type="button" class="login_other" onclick="location.href='./findId.html'">아이디 찾기</button>
+                    <button type="button" class="login_other" onclick="location.href='./findPassword.html'">비밀번호 찾기</button>
+                    <button type="button"  class="login_other"onclick="location.href='./signup.html'"><span>회원가입</span></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
