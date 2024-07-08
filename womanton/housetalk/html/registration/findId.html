@@ -16,8 +16,9 @@
             <h2 class="findid-text01">이메일 정보로 찾기</h2>
             <form method="post" action="" id="signup-form">
                 <div class="signup-email">                
-                    <input type="email" name="userEmail" placeholder="이메일 입력">
-                    <button type="button" onclick="location.href='./'">인증받기</button>
+                    <input type="email" id="email" name="email" required placeholder="이메일 입력">
+                    <button type="button" id="verify-email" onclick="location.href='./'">인증받기</button>
+                    <div id="email-message"></div> <!-- 이메일 인증(중복) 확인 메시지 -->
                 </div>
             </form>
         </div>

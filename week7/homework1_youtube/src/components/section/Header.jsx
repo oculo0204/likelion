@@ -9,7 +9,7 @@ const Header = () => {
         <h1 className="header_logo">
             <a href='/'>
                 <em arial-hidden='true'></em>
-                <span>webs<br/>youtube</span>
+                <span>oculo<br/>youtube</span>
             </a>
         </h1>
         <nav className="header_menu">
