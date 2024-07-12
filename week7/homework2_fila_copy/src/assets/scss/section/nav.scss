@@ -1,0 +1,48 @@
+.menu{
+    display: flex;
+}
+.category{
+    padding: 15px;
+
+}
+.category> a{
+    font-family: 'nexonLv1-Bold';
+    font-weight: bold;
+    font-size: 18px;
+}
+.menuBox {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 400px;
+}
+.CloseBox{
+    display: flex;
+    background-color: var(--white);
+    position: absolute;
+    left:0px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.new-list{
+    width: 200px;
+    height: 400px;
+}
+.shopClose{
+    margin-bottom: 10px;
+}
+.shopClose:nth-child(1){
+    font-family: 'nexonLv1-Bold';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.v-line {
+
+    border-left : 1px solid var(--white100);
+    margin-right: 40px;
+    height : 500px;
+
+  }
