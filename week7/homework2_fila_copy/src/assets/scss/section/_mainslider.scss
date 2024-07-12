@@ -1,45 +1,26 @@
-.developer__inner {
+.h1-center{
+    font-family: 'nexonLv1-Bold';
+    font-weight: bold;
+    font-size: 30px;
+}
+.h1-center{
     display: flex;
-    flex-wrap: wrap;
-
-    &.overflow {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-    }
-
-    .developer {
-        // margin-right: 20px;
-
-        .developer__img {
-            // width: 150px;
-            // height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
-        .developer__info {
-            // width: 150px;
-            text-align: center;
-            @include line-one;
-            // padding-bottom: 40px;
-        }
-    }
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
-
-#developerPage {
-    .developer__inner {
-        .developer {
-            margin-right: 20px;
-        }
-        .developer__img {
-            width: 150px;
-            height: 150px;
-        }
-        .developer__info {
-            width: 150px;
-            padding-bottom: 40px;
-        }
+.category-buttons{
+    display: flex;
+    justify-content: center;
+    button{
+        background-color: white;
+        font-family: 'nexonLv1-Bold';
+        font-weight: bold;
+        color: var(--black200);
+        padding-bottom: 20px;
+        padding-right: 20px;
+        
     }
+    margin-bottom: 20px;
 }

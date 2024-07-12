@@ -13,7 +13,7 @@ const MainBanner = () => {
   const images = [image1, image2, image3, image4];
 
   return (
-    <section id='main-banner'>
+    <section id='main-banner' >
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -23,8 +23,12 @@ const MainBanner = () => {
         draggable={true} // 드래그 가능 여부 설정
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} style={{ width: '100%' }} >
-            <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%' }} />
+          <SwiperSlide key={index}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -33,3 +37,4 @@ const MainBanner = () => {
 };
 
 export default MainBanner;
+
