@@ -1,11 +1,22 @@
-.menu{
+
+.menu {
     display: flex;
     z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    &.hideNav {
+      transform: translateY(-100%);
+    }
     
+.hideNav {
+    top: -5rem; /* 스크롤 내릴 때 네비게이션 바를 화면 밖으로 숨김 */
 }
+
+  }
 .category{
     padding: 15px;
-
+    .nav-title{
+        color: var(--white);
+    }
 }
 .category> a{
     font-family: 'nexonLv1-Bold';
@@ -16,6 +27,7 @@
     z-index: 10;
     width: 100%;
     height: 400px;
+    background-color: transparent;
 }
 .CloseBox{
     display: flex;
@@ -47,3 +59,4 @@
     height : 500px;
 
   }
+

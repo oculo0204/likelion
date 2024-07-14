@@ -1,37 +1,66 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay } from 'swiper/modules';
 
-// 로컬 이미지 가져오기
-import image1 from '../../assets/img/shoese/image1.jpg';
-import image2 from '../../assets/img/shoese/image2.jpg';
-import image3 from '../../assets/img/shoese/image3.jpg';
-import image4 from '../../assets/img/shoese/image4.jpg';
-import image5 from '../../assets/img/shoese/image5.jpg';
-import image6 from '../../assets/img/shoese/image6.jpg';
-import image7 from '../../assets/img/shoese/image7.jpg';
-import image8 from '../../assets/img/shoese/image8.jpg';
+// 동적으로 이미지 가져오기
+const importAll = (requireContext) => requireContext.keys().map(requireContext);
 
-//냉감의류
-import coldimage1 from '../../assets/img/coldcloth/cold-image1.jpg';
-import coldimage2 from '../../assets/img/coldcloth/cold-image2.jpg';
-import coldimage3 from '../../assets/img/coldcloth/cold-image3.jpg';
-import coldimage4 from '../../assets/img/coldcloth/cold-image4.jpg';
-import coldimage5 from '../../assets/img/coldcloth/cold-image5.jpg';
-import coldimage6 from '../../assets/img/coldcloth/cold-image6.jpg';
-import coldimage7 from '../../assets/img/coldcloth/cold-image7.jpg';
-import coldimage8 from '../../assets/img/coldcloth/cold-image8.jpg';
+const shoeseImages = importAll(require.context('../../assets/img/shoese', false, /\.(jpg|jpeg|png|gif)$/));
+const coldClothImages = importAll(require.context('../../assets/img/coldcloth', false, /\.(jpg|jpeg|png|gif)$/));
 
 const MainSlider = () => {
   const [currentCategory, setCurrentCategory] = useState('페이토&샌들'); // 초기 카테고리 설정
+  
   const images = {
-    '페이토&샌들': [image1, image2, image3, image4, image5, image6, image7, image8],
-    '냉감의류': [coldimage1, coldimage2, coldimage3, coldimage4, coldimage5, coldimage6, coldimage7, coldimage8],
-    '에샤페': [image3, image4, image1, image2],
-    '워터스포츠': [image4, image1, image2, image3],
-    '시어서커': [image1, image2, image3, image4],
-    '테니스': [image2, image3, image4, image1]
+    '페이토&샌들': shoeseImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '공용',
+        title: `페이토 샌들 ${index + 1}`,
+        price: `${79000 + index * 1000}원`,
+      },
+    })),
+    '냉감의류': coldClothImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '정사이즈핏',
+        title: `냉감의류 ${index + 1}`,
+        price: `${69000 + index * 1000}원`,
+      },
+    })),
+    // 다른 카테고리들도 같은 방식으로 설정
+    '에샤페': shoeseImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '정사이즈핏',
+        title: `에샤페 ${index + 1}`,
+        price: `${89000 + index * 1000}원`,
+      },
+    })),
+    '워터스포츠': shoeseImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '정사이즈핏',
+        title: `워터스포츠 ${index + 1}`,
+        price: `${99000 + index * 1000}원`,
+      },
+    })),
+    '시어서커': shoeseImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '정사이즈핏',
+        title: `시어서커 ${index + 1}`,
+        price: `${109000 + index * 1000}원`,
+      },
+    })),
+    '테니스': shoeseImages.map((image, index) => ({
+      src: image,
+      text: {
+        tag: '정사이즈핏',
+        title: `테니스 ${index + 1}`,
+        price: `${119000 + index * 1000}원`,
+      },
+    })),
   };
 
   const handleCategoryClick = (category) => {
@@ -54,16 +83,24 @@ const MainSlider = () => {
 
       <section id='main-slider'>
         <Swiper
-          slidesPerView={6}
+          slidesPerView={7}
           spaceBetween={30}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          modules={[Autoplay]}
           grabCursor={true}
           draggable={true}
         >
-          {images[currentCategory].map((image, index) => (
+          {images[currentCategory].map((imageData, index) => (
             <SwiperSlide key={index} style={{ width: '30%' }}>
-              <img src={image} alt={`Slide ${index + 1}`} style={{ width: '100%' }} />
+              <div>
+                <img src={imageData.src} alt={`Slide ${index + 1}`} style={{ width: '100%' }} />
+                <div className='text-box'>
+                    <div><span className='text-size'>{imageData.text.tag}</span></div>
+                    <p className='text-name'>{imageData.text.title}</p>
+                    <div className='hori-align'>
+                        <p className='text-price'>{imageData.text.price}</p>
+                        <button className='jimcong'></button>
+                    </div>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
