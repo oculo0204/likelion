@@ -1,0 +1,22 @@
+.header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 85px;
+    padding: 0 70px;
+    border: solid 1px var(--background);
+    box-sizing: content-box;
+    .grade{
+        .third{
+            margin-right: 60px;
+        }
+    }
+    .hd-right{
+        display: flex;
+        .tsolution{
+            margin-right: 30px;
+        }
+    }
+}

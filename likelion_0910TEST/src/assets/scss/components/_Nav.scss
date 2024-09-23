@@ -1,0 +1,36 @@
+#nav-aside{
+    position: fixed;
+    right:10px;
+    bottom:50px;
+    display: flex;
+    flex-direction: column;
+    .as_link{
+        width: 50px;
+        height: 50px;
+        background-color: #FFCF00;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        img{
+            width: 26px;
+            height: 26px;
+        }
+    }
+    .to-top{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        background-color: white;
+        border: solid 1px #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        img{
+            width: 26px;
+            height: 26px;
+        }
+    }
+}

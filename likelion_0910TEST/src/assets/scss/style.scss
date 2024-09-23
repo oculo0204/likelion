@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/resets";
+@import "setting/common";
+@import "setting/vars";
+//components
+@import "components/Header";
+@import "components/LinkIcon";
+@import "components/First";
+@import "components/Second";
+@import "components/Third";
+@import "components/Nav";
+
+//swiper
+@import 'swiper-bundle.min.css';
