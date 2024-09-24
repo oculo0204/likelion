@@ -1,0 +1,65 @@
+.Main_wrap{
+    width: 375px;
+    //height: 812px;
+    margin: 0 auto;
+    .notify{
+        width: 375px;
+        margin: 0 auto;
+        ul{
+            li{
+                height: 30px;
+                border-bottom: solid 1px rgb(82, 82, 82);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    font-family: 'Pretendard';
+                    font-size: 12px;
+                }
+                img{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+    .main-video{
+        width: 336px;
+        height: 160px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        img{
+            width: 336px;
+            height: 160px;
+            border-radius: 10px;
+        }
+    }
+    //swiper사이즈 조정 필요
+    
+}
+
+.slide-wrap{
+    width: 375px;
+    overflow: hidden;
+    height: 140px;
+    .slide-content{
+        width: 100%;
+        height: 100%;
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 589.79px;
+            height: 140px;
+        }
+    }
+    .swiper-pagination-bullet {
+        background-color: #D4C4DB;
+        width: 5px;
+        height: 5px;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #fff;
+      }
+}

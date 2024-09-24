@@ -1,0 +1,15 @@
+.Loading_wrap{
+    width: 375px;
+    height: 812px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    position: absolute;
+    top:0;
+    img{
+        width: 193px;
+        height: 51px;
+    }
+    z-index: 1000;
+}
