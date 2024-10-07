@@ -11,13 +11,12 @@ const Search = () => {
     const mapRef = useRef(null);
     const map = useRef(null);
     const [showAll, setShowAll] = useState(false);
-    const [showActionSheet, setShowActionSheet] = useState(false); // 액션 시트 표시 상태
-
     
     // close 버튼 클릭 시 액션 시트 닫기
     const close = () => {
-        document.getElementById("actionSheet").classList.remove("active");
+        document.getElementById('actionSheet').classList.remove('active')
     };
+    
     
     // 카카오 맵 함수
     useEffect(() => {
@@ -49,6 +48,7 @@ const Search = () => {
 
                     // 검색된 장소 리스트 업데이트
                     setPlacesList(data);
+                    
                 } else {
                     console.error('장소 검색 실패:', status);
                 }
@@ -84,39 +84,41 @@ const Search = () => {
 
     // 액션 시트 표시 제어
     useEffect(() => {
-        setShowActionSheet(placesList.length > 4); // placesList가 4개 이상일 때 액션 시트 표시
-        const actionSheet = document.getElementById('actionSheet');
-        if (showActionSheet) {
-            actionSheet.classList.add('active');
-        } 
+        if(placesList.length > 4){
+            handleShow();
+        }
     }, [placesList]);
+
+    const handleShow = ()=>{
+        document.getElementById('actionSheet').classList.add('active');
+    }
     return (
         <div className='Search_wrap container'>
             <Slider />
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='srch-form'>
                 <input className='srch-input' placeholder="장소를 검색해주세요!" value={inputText} onChange={handleChange} />
                 <button type='submit'>
                     <img src={Srh} alt='search' />
                 </button>
             </form>
             {/* 검색된 장소 리스트 */}
-            {placesList.length > 0 && (
-                <div className='places-list' style={{ maxHeight: '200px', overflowY: 'auto' }}>
+                <div className="action-sheet" id="actionSheet">
+                    <div className="action-options">
+                        
+                    <div className='places-list'>
+                    <div class="border-line"></div>
+                    <h1>"{inputText}" 주변에 있는 곳</h1>
+                    
                     {placesList.slice(0, showAll ? placesList.length : 4).map((place, index) => (
                         <div key={index} className="place-item" onClick={() => { handlePlaceClick(place); }}>
                             {place.place_name}
                         </div>
                     ))}
                 </div>
-            )}
-            {showActionSheet && (
-                <div className="action-sheet" id="actionSheet">
-                    <div className="action-options">
-                        <button className="close" onClick={close}>닫기</button>
+                        
                     </div>
                 </div>
-            )}
-            <div className='map' style={{ width: '100%', height: '400px' }}></div>
+            <div className='map'></div>
         </div>
     );
 }
